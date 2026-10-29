@@ -27,6 +27,23 @@ npm run build
 npm run preview
 ```
 
+## Publicar en GitHub Pages
+
+El juego **debe publicarse compilado** (carpeta `dist`), no el código fuente:
+el `index.html` de la raíz usa `/src/main.js`, que solo funciona con el servidor de Vite.
+
+La forma recomendada es con el workflow incluido en `.github/workflows/deploy.yml`:
+
+1. Sube el proyecto a GitHub (rama `main` o `master`).
+2. En el repositorio ve a **Settings → Pages → Build and deployment**.
+3. En **Source** elige **GitHub Actions**.
+4. Haz push a `main`. El workflow compila (`npm run build`) y publica `dist`.
+
+La URL quedará como `https://TU_USUARIO.github.io/NOMBRE_DEL_REPO/`.
+
+Alternativa manual: ejecuta `npm run build` y sube **el contenido** de `dist/`
+a la rama `gh-pages` (o a la raíz de un repo `TU_USUARIO.github.io`).
+
 ## Controles
 
 | Tecla | Acción |
