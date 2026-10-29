@@ -1,0 +1,19 @@
+{
+  "name": "el-resplandor-overlook",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Juego 2D de terror top-down inspirado en El resplandor, hecho con Phaser 3 + Vite",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check:map": "node scripts/check-map.mjs"
+  },
+  "dependencies": {
+    "phaser": "^3.88.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}
